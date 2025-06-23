@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#post-list > div {
+  padding: 8px;
+  border-bottom: 1px solid #f86666;
+  cursor: pointer;
+}
+
+#post-list > div:hover {
+  background-color: #f73f3f;
+}
+
+#post-detail {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
