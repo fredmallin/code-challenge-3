@@ -1,4 +1,3 @@
-
 {
   "posts": [
     {
@@ -12,6 +11,24 @@
       "title": "Second Post",
       "content": "Another exciting blog entry.",
       "author": "Jane"
+    },
+    {
+      "title": "wantam",
+      "content": "justice",
+      "author": "fredrick",
+      "id": 3
+    },
+    {
+      "title": "wantam",
+      "content": "justice",
+      "author": "fredrick",
+      "id": 4
+    },
+    {
+      "title": "wantam",
+      "content": "justice",
+      "author": "fredrick",
+      "id": 5
     }
   ]
 }

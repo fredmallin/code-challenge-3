@@ -7,7 +7,6 @@ function main() {
   displayPosts();
 }
 
-// Fetch and display all posts (titles only)
 function displayPosts() {
   fetch(baseUrl)
     .then(res => res.json())
@@ -23,7 +22,6 @@ function displayPosts() {
     });
 }
 
-//  new post form submission
 function addNewPostListener() {
   const form = document.getElementById('new-post-form');
 
@@ -43,8 +41,8 @@ function addNewPostListener() {
     })
       .then(res => res.json())
       .then(() => {
-        form.reset();     // clear the form
-        displayPosts();   // refresh the post list
+        form.reset();     
+        displayPosts();   
       });
   });
 }
