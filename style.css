@@ -1,29 +1,60 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background-color: #f9f9f9;
 }
 
-#post-list > div {
-  padding: 8px;
-  border-bottom: 1px solid #f86666;
+h1, h3 {
+  color: #333;
+}
+
+#post-list div {
   cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  transition: background-color 0.3s;
 }
 
-#post-list > div:hover {
-  background-color: #f73f3f;
+#post-list div:hover {
+  background-color: #f0bbbb;
 }
 
 #post-detail {
   margin-top: 20px;
-}
-
-.hidden {
-  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 
 form {
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#edit-post-form.hidden {
+  display: none;
 }
