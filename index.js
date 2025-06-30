@@ -12,7 +12,7 @@ function main() {
 }
 
 function displayPosts() {
-  fetch("http://localhost:3001/posts")
+  fetch("http://localhost:3000/posts")
     .then(res => res.json())
     .then(posts => {
       const postList = document.getElementById("post-list");
@@ -37,7 +37,7 @@ function displayPosts() {
         const deleteBtn = div.querySelector(".delete-post-btn");
         deleteBtn.addEventListener("click", (e) => {
           e.stopPropagation();
-          fetch(`http://localhost:3001/posts/${post.id}`, {
+          fetch(`http://localhost:3000/posts/${post.id}`, {
             method: "DELETE"
           })
             .then(() => {
@@ -59,7 +59,7 @@ function displayPosts() {
 }
 
 function handlePostClick(id) {
-  fetch(`http://localhost:3001/posts/${id}`)
+  fetch(`http://localhost:3000/posts/${id}`)
     .then(res => res.json())
     .then(post => {
       currentPostId = post.id;
@@ -95,7 +95,7 @@ function addNewPostListener() {
       image: document.getElementById("new-image").value
     };
 
-    fetch("http://localhost:3001/posts", {
+    fetch("http://localhost:3000/posts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPost)
@@ -122,7 +122,7 @@ function addEditPostListener() {
       content: document.getElementById("edit-content").value
     };
 
-    fetch(`http://localhost:3001/posts/${currentPostId}`, {
+    fetch(`http://localhost:3000/posts/${currentPostId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedPost)
@@ -140,7 +140,7 @@ function addDeleteDetailListener() {
   document.getElementById("delete-btn").addEventListener("click", () => {
     if (!currentPostId) return;
 
-    fetch(`http://localhost:3001/posts/${currentPostId}`, {
+    fetch(`http://localhost:3000/posts/${currentPostId}`, {
       method: "DELETE"
     })
       .then(() => {
